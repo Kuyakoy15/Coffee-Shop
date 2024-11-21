@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact - Kape Kuy's">
+  <meta property="og:title" content="Contact - Kape Kuy's">
+  <meta property="og:description" content="If you have any questions or inquiries, feel free to reach out to us!">
+  <meta property="og:image" content="path_to_image.jpg"> <!-- Replace with actual image -->
+  <title>Contact - Kape Kuy's</title>
+  
+  <!-- Link to Google Fonts for Rock Salt and Courier Prime -->
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Courier+Prime&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for Social Media Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: 'Courier Prime', monospace;
+      background-color: #f8f3e7;
+      color: #4E3B31; /* Updated text color */
+    }
+
+    /* Header Section */
+    header {
+      background-color: #4E3B31; /* Updated header color */
+      color: #f8f3e7;
+      padding: 20px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar .logo img:hover {
+      transform: scale(1.1); /* Scale logo on hover */
+    }
+    .navbar .logo h1:hover {
+      color: #f8f37e; /* Change color on hover */
+    }
+    .navbar .logo a {
+      text-decoration: none; /* Remove underline from the link */
+      display: flex;
+      align-items: center; /* Align items vertically centered */
+    }
+
+    
+    .navbar .logo img {
+      width: 80px; /* Increased logo size */
+      height: auto; /* Maintain aspect ratio */
+      transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    .navbar .logo h1 {
+      font-family: 'Rock Salt', cursive;
+      font-size: 2.5rem; /* Increased font size */
+      color: #f8f3e7;
+      margin: 0;
+      margin-left: 10px; /* Space between the logo image and text */
+      cursor: pointer; /* Show pointer on hover */
+      transition: color 0.3s ease; /* Smooth transition for color change */
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f8f3e7;
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f8f37e;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #f8f3e7;
+    }
+
+    .section-title {
+      font-family: 'Rock Salt', cursive;
+      font-size: 3rem;
+      color: #4E3B31; /* Updated section title color */
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      color: #4E3B31; /* Updated paragraph color */
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+      display: grid;
+      gap: 15px;
+      justify-items: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      width: 100%; /* Ensure inputs and text area fill the width of the container */
+      max-width: 600px; /* Set a max-width for input and textarea */
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 0 auto; /* Center the input fields */
+    }
+
+    .contact-form button {
+      background-color: #4E3B31; /* Updated button background */
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      width: 100%; /* Make the button span the width of the container */
+      max-width: 600px; /* Set a max-width for button */
+      margin-top: 10px; /* Add some spacing above the button */
+    }
+
+    .contact-form button:hover {
+      background-color: #f8f37e;
+    }
+
+    /* Contact Information */
+    .contact-info {
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+
+    /* Static Map Image */
+    .map-container {
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .map-container img {
+      width: 100%;  /* Make the image fill the container */
+      max-width: 800px;  /* Set a max-width for the image */
+      height: auto;  /* Maintain aspect ratio */
+      border: 5px solid #4E3B31; /* Updated border color */
+      border-radius: 10px;  /* Optional: You can add rounded corners */
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #4E3B31; /* Updated footer background */
+      color: #f8f3e7;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #f8f3e7;
+      margin: 0 10px;
+      font-size: 2rem; /* Larger size for social media icons */
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #f8f37e; /* Hover effect color */
+    }
+
+    /* Success Notification */
+    .success-message {
+      display: none;
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem; /* Slightly smaller on mobile */
+        margin: 0 5px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 90%; /* Ensure form inputs are a bit smaller on mobile */
+      }
+
+      .contact-form button {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Kape Kuy's Logo"> <!-- Your logo image here -->
+          <h1>Kape Kuy's</h1>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="features.html"><i class="fas fa-star"></i> Features</a></li>
+          <li><a href="products.html"><i class="fas fa-coffee"></i> Products</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+    
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form action="javascript:void(0);" method="post" onsubmit="showSuccessMessage()">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+      Your message has been successfully sent!
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:info@kape.com">dantetaypin@gmail.com</a></p>
+      <p><strong>Phone:</strong> 0965 814 3486</p>
+    </div>
+
+    <!-- Static Map Image -->
+    <div class="map-container">
+      <h3>Our Location</h3>
+      <!-- Replace the src below with the path to your image -->
+      <img src="location.png" alt="Kape Kuy's Location on Google Maps">
+      <p>
+        <a href="https://www.google.com/maps/place/6%C2%B012'42.2%22N+125%C2%B014'20.6%22E/@6.2115333,125.239155,17.75z/data=!4m4!3m3!8m2!3d6.211707!4d125.239056?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" 
+           target="_blank" 
+           style="text-decoration: none; color: #4E3B31; font-size: 1.2rem; font-family: 'Courier Prime', monospace;">
+          View on Google Maps
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-content">
+        <p>&copy; 2024 Kape Kuy's. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://web.facebook.com/profile.php?id=100069961628393" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/DanteTaypin" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/kuyaa_kooy/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript function to show success message
+    function showSuccessMessage() {
+      const successMessage = document.getElementById('successMessage');
+      successMessage.style.display = 'block'; // Show the success message
+      setTimeout(function() {
+        successMessage.style.display = 'none'; // Hide the success message after 3 seconds
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>

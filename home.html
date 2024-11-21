@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kape Kuy's">
+  <meta property="og:title" content="Home - Kape Kuy's">
+  <meta property="og:description" content="Get caffeinated! Where every sip feels like home at Kape Kuy's.">
+  <meta property="og:image" content="path_to_image.jpg"> <!-- Replace with actual image -->
+  <title>Home - Kape Kuy's</title>
+  
+  <!-- Link to Google Fonts for Rock Salt and Courier Prime -->
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Courier+Prime&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Social Media Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: 'Courier Prime', monospace;
+      background-color: #f8f3e7;
+      color: #4E3B31; /* Changed to brown */
+    }
+
+    /* Header Section */
+    header {
+      background-color: #4E3B31; /* Changed to brown */
+      color: #f8f3e7;
+      padding: 20px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .navbar .logo img:hover {
+      transform: scale(1.1); /* Scale logo on hover */
+    }
+    .navbar .logo h1:hover {
+      color: #f8f37e; /* Change color on hover */
+    }
+    .navbar .logo a {
+      text-decoration: none; /* Remove underline from the link */
+      display: flex;
+      align-items: center; /* Align items vertically centered */
+    }
+    .navbar .logo img {
+      width: 80px; /* Increased logo size */
+      height: auto; /* Maintain aspect ratio */
+      transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    .navbar .logo h1 {
+      font-family: 'Rock Salt', cursive;
+      font-size: 2.5rem; /* Increased font size */
+      color: #f8f3e7;
+      margin: 0;
+      margin-left: 10px; /* Space between the logo image and text */
+      cursor: pointer; /* Show pointer on hover */
+      transition: color 0.3s ease; /* Smooth transition for color change */
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f8f3e7;
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f8f37e;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background-color: #f8f3e7;
+    }
+
+    .hero-content h2 {
+      font-family: 'Rock Salt', cursive;
+      font-size: 3.5rem;
+      color: #4E3B31; /* Changed to brown */
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.5rem;
+      color: #4E3B31; /* Changed to brown */
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      text-decoration: none;
+      background-color: #4E3B31; /* Changed to brown */
+      color: #f8f3e7;
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f8f37e;
+    }
+
+    /* Owner Profile Section */
+    #owner-profile {
+      background-color: #f8f3e7;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #owner-profile .profile-image {
+      width: 300px;  /* Increase size of image */
+      height: 300px;  /* Increase height to match width */
+      object-fit: cover;
+      border-radius: 50%; /* Circular frame */
+      margin-bottom: 20px;
+      border: 5px solid #4E3B31; /* Optional border around the image */
+    }
+
+    #owner-profile h3 {
+      font-family: 'Rock Salt', cursive;
+      font-size: 2rem;
+      color: #4E3B31; /* Changed to brown */
+      margin-bottom: 10px;
+    }
+
+    #owner-profile p {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.2rem;
+      color: #4E3B31; /* Changed to brown */
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #4E3B31; /* Changed to brown */
+      color: #f8f3e7;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #f8f3e7;
+      margin: 0 10px;
+      font-size: 2rem; /* Adjusted for larger icons */
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #f8f37e;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+
+      .hero-content h2 {
+        font-size: 2.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+
+      .cta-button {
+        font-size: 1rem;
+        padding: 8px 20px;
+      }
+
+      .social-icons a {
+        font-size: 1.5rem; /* Smaller icons for mobile */
+        margin: 0 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="logo.png" alt="Kape Kuy's Logo"> <!-- Your logo image here -->
+          <h1>Kape Kuy's</h1>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="features.html"><i class="fas fa-star"></i> Features</a></li>
+          <li><a href="products.html"><i class="fas fa-coffee"></i> Products</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Get caffeinated!</h2>
+      <p>"Where every sip feels like home."</p>
+      <a href="products.html" class="cta-button">Let's go!</a>
+    </div>
+  </section>
+
+  <!-- Owner Profile Section -->
+  <section id="owner-profile">
+    <img src="dante.jpg" alt="Owner" class="profile-image">
+    <h3>Meet the Owner</h3>
+    <p>Hi! I'm Dante Taypin Nicolas Jr. (Kuyakoy), the proud owner of Kape Kuy's. With a passion for coffee and community, I founded this cozy spot to offer the best brews and a warm, inviting space. When I'm not brewing your next cup, you can find me experimenting with new flavors or chatting with guests. Join us and experience the comfort of your favorite coffee shop!</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Kape Kuy's. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/profile.php?id=100069961628393" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/DanteTaypin" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/kuyaa_kooy/" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
